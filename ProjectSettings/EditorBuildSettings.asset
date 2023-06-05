@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/assignment-scene.unity
+    guid: b84db924a012b3e4fa07de4bd5bd0c7e
   - enabled: 0
     path: Assets/Scenes/2b-spawner.unity
     guid: 82e03265661fb744ca5016882129701f
