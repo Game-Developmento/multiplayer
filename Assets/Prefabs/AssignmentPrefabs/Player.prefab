@@ -329,6 +329,25 @@ MonoBehaviour:
       m_Flags: 8
     m_Flags: 0
   speed: 3
+  jumpAction:
+    m_Name: Jump
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 5df71ce3-7c16-49c3-86de-517e6ed91330
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 166216ca-436d-4902-808c-ebdbaf48c03e
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Jump
+      m_Flags: 0
+    m_Flags: 0
+  gravityValue: -9.81
+  jumpVelocity: 5
 --- !u!1 &8204583292277282068
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,7 +505,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
