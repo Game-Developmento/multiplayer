@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Fusion;
+using TMPro;
+
 
 public class PlayerController : NetworkBehaviour
 {

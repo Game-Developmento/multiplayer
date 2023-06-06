@@ -2103,7 +2103,7 @@ GameObject:
   - component: {fileID: 7799556912747754881}
   - component: {fileID: 6175587704176278506}
   - component: {fileID: 2089563491646080981}
-  - component: {fileID: 2667288160532449478}
+  - component: {fileID: 2924244651962407795}
   m_Layer: 0
   m_Name: PlayerMegan
   m_TagString: Player
@@ -2118,7 +2118,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7299448679794448131}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2132,7 +2132,7 @@ Transform:
   - {fileID: 3793203286989217675}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &4100287348168333251
 Animator:
   serializedVersion: 5
@@ -2178,7 +2178,7 @@ MonoBehaviour:
   - {fileID: 6129038487078539084}
   - {fileID: 7799556912747754881}
   - {fileID: 2089563491646080981}
-  - {fileID: 2667288160532449478}
+  - {fileID: 2924244651962407795}
   SimulationBehaviours: []
 --- !u!114 &6129038487078539084
 MonoBehaviour:
@@ -2194,7 +2194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
   InterpolationSpace: 0
-  InterpolationTarget: {fileID: 0}
+  InterpolationTarget: {fileID: 7928315886566886841}
   InterpolateErrorCorrection: 1
   InterpolatedErrorCorrectionSettings:
     MinRate: 3.3
@@ -2360,7 +2360,7 @@ MonoBehaviour:
       m_Action: Jump
       m_Flags: 0
     m_Flags: 0
---- !u!114 &2667288160532449478
+--- !u!114 &2924244651962407795
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2373,17 +2373,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
-  Damage: 0
   attack:
     m_Name: Attack
     m_Type: 1
     m_ExpectedControlType: 
-    m_Id: 3c3749f9-7ab0-4939-9346-9d9a134bbce8
+    m_Id: 4065149f-d2bd-4c4e-bc7d-8b5926e94162
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: bee1ab2b-51a6-4847-865c-e6b56ace95f9
+      m_Id: cb46d241-98d9-46e2-9798-d0ffe3d78b23
       m_Path: <Mouse>/leftButton
       m_Interactions: 
       m_Processors: 
@@ -2395,12 +2394,12 @@ MonoBehaviour:
     m_Name: Attack Location
     m_Type: 0
     m_ExpectedControlType: Vector2
-    m_Id: d77d0221-3251-49be-926d-374a4eb39235
+    m_Id: ce5194ec-2547-4f58-8471-be6d59369521
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: 689abc02-1383-44fd-8a5c-adb47470c2b0
+      m_Id: 93b4b584-828e-496f-9ec1-f0d5e17d29bb
       m_Path: <Mouse>/position
       m_Interactions: 
       m_Processors: 
@@ -2409,7 +2408,8 @@ MonoBehaviour:
       m_Flags: 0
     m_Flags: 0
   prefabToSpawn: {fileID: 6932264641009443125, guid: dc8ad8f6202bcec4a8cfb423e5c18e74, type: 3}
-  shootDistance: 5
+  prefabHeight: 1.5
+  offset: 0.8
 --- !u!1 &7407846236573449889
 GameObject:
   m_ObjectHideFlags: 0
