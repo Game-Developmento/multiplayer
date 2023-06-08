@@ -12,6 +12,7 @@ public class PlayerSpawner : SimulationBehaviour, IPlayerJoined
         if (player == Runner.LocalPlayer)
         {
             int playerCount = Runner.ActivePlayers.Count();
+            // Flip spawn facing side for every other player that joins 
             float rotationAngle = playerCount % 2 == 0 ? leftDirectionAngle : rightDirectionAngle;
             Quaternion playerRotation = Quaternion.Euler(0, rotationAngle, 0);
             Runner.Spawn(PlayerPrefab, new Vector3(0, 1, 0), playerRotation, player);

@@ -5,7 +5,7 @@ using System.Collections;
 public class Rocket : NetworkBehaviour
 {
     private float speed = 20f;
-    private ConstantForce constForce;
+    private ConstantForce constForce; // This is a Unity component
     private float rotationAngle;
     private float gravity = 10f;
     private float isRightDirection = 90;
@@ -15,6 +15,7 @@ public class Rocket : NetworkBehaviour
     public override void Spawned()
     {
         constForce = GetComponent<ConstantForce>();
+        // Get the rotation of the spawned rocket
         rotationAngle = transform.rotation.eulerAngles.z;
     }
 
@@ -22,7 +23,9 @@ public class Rocket : NetworkBehaviour
     {
         if (constForce != null)
         {
-            constForce.force = new Vector3(rotationAngle == isRightDirection ? -speed : speed, gravity, 0);
+            // Move on the axis away from the player that shot it
+            float speedDirection = rotationAngle == isRightDirection ? -speed : speed;
+            constForce.force = new Vector3(speedDirection, gravity, 0);
         }
     }
     private void OnCollisionEnter(Collision other)
@@ -30,6 +33,7 @@ public class Rocket : NetworkBehaviour
         if (gameObject && other.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
+            // Destroy the player that was hit! 
             Destroy(other.gameObject);
         }
     }

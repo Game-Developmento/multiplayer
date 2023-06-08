@@ -23,8 +23,7 @@ public class PlayerController : NetworkBehaviour
     private int jumpTriggerHash;
     void OnValidate()
     {
-        // Provide default bindings for the input actions.
-        // Based on answer by DMGregory: https://gamedev.stackexchange.com/a/205345/18261
+        // Provide default bindings for the input actions
         if (moveAction == null)
         {
             moveAction = new InputAction(type: InputActionType.Button);
@@ -45,9 +44,9 @@ public class PlayerController : NetworkBehaviour
     }
     private void Update()
     {
+        // We have to read the button status in Update, because FixedNetworkUpdate might miss it.
         if (HasStateAuthority)
         {
-            // We have to read the button status in Update, because FixedNetworkUpdate might miss it.
             if (jumpAction.WasPressedThisFrame())
             {
                 jumpPressed = true;
